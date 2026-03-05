@@ -12,5 +12,5 @@ app.use(express.json());
 app.use(cors());
 app.use("/courses", courses);
 app.use("/register", register);
-const port = process.env.PORT || 3300;
+const port = process.env.PORT || 3100;
 app.listen(port, () => console.log(`Our backend api is listening via port ${port}`));
