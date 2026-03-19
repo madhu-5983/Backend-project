@@ -54,7 +54,7 @@ stages:
     displayName: 'Clean Up Docker Images'
     steps:
     - script: |
-        docker rmi -f $(docker images -aq)
+        docker images -aq | xargs -r docker rmi -f
       displayName: 'Remove all Docker images'
 
 - stage: ModifyAndPublishYaml
